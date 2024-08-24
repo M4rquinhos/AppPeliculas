@@ -1,0 +1,13 @@
+<h2>Datos de la pelicula</h2>
+
+<h4>Implementacion moderna con For</h4>
+@for (pelicula of peliculas; track $index) {
+<div>
+  <p>{{ $index }}) Pelicula: {{ pelicula.titulo | uppercase }}</p>
+  <p>
+    Fecha de estreno:
+    {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" | uppercase }}
+  </p>
+  <p>Precio: {{ pelicula.precio | currency }}</p>
+</div>
+}
