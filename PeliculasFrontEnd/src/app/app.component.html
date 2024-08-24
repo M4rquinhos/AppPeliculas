@@ -2,12 +2,19 @@
 
 <h4>Implementacion moderna con For</h4>
 @for (pelicula of peliculas; track $index) {
-<div>
-  <p>{{ $index }}) Pelicula: {{ pelicula.titulo | uppercase }}</p>
-  <p>
-    Fecha de estreno:
-    {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" | uppercase }}
-  </p>
-  <p>Precio: {{ pelicula.precio | currency }}</p>
+<div class="contenedor-peicula">
+  <div style="display: flex; flex-direction: row; gap: 10px;">
+    <div>
+      <img [ngSrc]="pelicula.poster" priority width="169" height="250"/>
+    </div>
+    <div>
+      <p>{{ $index }}) Pelicula: {{ pelicula.titulo | uppercase }}</p>
+      <p>
+        Fecha de estreno:
+        {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" | uppercase }}
+      </p>
+      <p>Precio: {{ pelicula.precio | currency }}</p>
+    </div>
+  </div>
 </div>
 }
