@@ -1,37 +1,7 @@
-<h2>Datos de la pelicula</h2>
+<h2>En cines</h2>
 
+<app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
 
-@if (!peliculas)
-{
-  <img src="assets/loading.gif" />
-}
-@else if (peliculas.length === 0)
-{
-  <div>
-    <p>No hay peliculas para mostrar</p>
-  </div>
-}
-@else {
-  @for (pelicula of peliculas; track $index) {
-    <div class="contenedor-peicula">
-      <div style="display: flex; flex-direction: row; gap: 10px">
-        <div>
-          <img
-            [ngSrc]="pelicula.poster"
-            [priority]="$index === 0"
-            width="169"
-            height="250"
-          />
-        </div>
-        <div>
-          <p>{{ $index }}) Pelicula: {{ pelicula.titulo | uppercase }}</p>
-          <p>
-            Fecha de estreno:
-            {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" | uppercase }}
-          </p>
-          <p>Precio: {{ pelicula.precio | currency }}</p>
-        </div>
-      </div>
-    </div>
-    }
-}
+<h2>Proximos estrenos!</h2>
+
+<app-listado-peliculas [peliculas]="peliculasProximosEstrenos"></app-listado-peliculas>
