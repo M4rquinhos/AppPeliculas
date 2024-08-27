@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Marco Carrillo\\Documents\\Dev\\Csharp\\ASP.NET\\AppPeliculas\\PeliculasAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D92393CB-2B3A-4A5D-80C0-160BF51AB940}|PeliculasAPI\\PeliculasAPI.csproj|c:\\users\\marco carrillo\\documents\\dev\\csharp\\asp.net\\apppeliculas\\peliculasapi\\peliculasapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D92393CB-2B3A-4A5D-80C0-160BF51AB940}|PeliculasAPI\\PeliculasAPI.csproj|solutionrelative:peliculasapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D92393CB-2B3A-4A5D-80C0-160BF51AB940}|PeliculasAPI\\PeliculasAPI.csproj|c:\\users\\marco carrillo\\documents\\dev\\csharp\\asp.net\\apppeliculas\\peliculasapi\\peliculasapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D92393CB-2B3A-4A5D-80C0-160BF51AB940}|PeliculasAPI\\PeliculasAPI.csproj|solutionrelative:peliculasapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,19 +19,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Marco Carrillo\\Documents\\Dev\\Csharp\\ASP.NET\\AppPeliculas\\PeliculasAPI\\PeliculasAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "PeliculasAPI\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Marco Carrillo\\Documents\\Dev\\Csharp\\ASP.NET\\AppPeliculas\\PeliculasAPI\\PeliculasAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "PeliculasAPI\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-23T21:57:31.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Marco Carrillo\\Documents\\Dev\\Csharp\\ASP.NET\\AppPeliculas\\PeliculasAPI\\PeliculasAPI\\Program.cs",
               "RelativeDocumentMoniker": "PeliculasAPI\\Program.cs",
