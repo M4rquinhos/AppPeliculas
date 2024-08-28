@@ -81,7 +81,7 @@ export class AppComponent implements OnInit {
           precio: 75,
           poster: "https://imgs.search.brave.com/ijba760iEs9qEus2YYPkTUeDgMajwXMDgdNosyzDmR8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pcnMu/d3d3Lndhcm5lcmJy/b3NsYXRpbm8uY29t/L2tleWFydC1qcGVn/L21vdmllcy9tZWRp/YS9icm93c2VyL2hw/N2Jfdl9kZF9rYV90/dF8yMDAweDMwMDBf/MzAwZHBpX214Xzg3/YzIyNjI3LmpwZWc"
         }];
-    }, 2000);
+    }, 100);
   }
   peliculasEnCines!: any[];
   peliculasProximosEstrenos!: any[];

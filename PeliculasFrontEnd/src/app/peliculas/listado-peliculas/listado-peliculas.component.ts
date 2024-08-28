@@ -1,10 +1,11 @@
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { ListadoGenericoComponent } from "../../compartidos/componentes/listado-generico/listado-generico.component";
 
 @Component({
   selector: 'app-listado-peliculas',
   standalone: true,
-  imports: [DatePipe, CurrencyPipe],
+  imports: [DatePipe, CurrencyPipe, ListadoGenericoComponent],
   templateUrl: './listado-peliculas.component.html',
   styleUrl: './listado-peliculas.component.css'
 })

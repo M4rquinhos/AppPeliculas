@@ -1,25 +1,15 @@
 <button (click)="agregarPelicula()">Agregar pelicula</button>
 
-@if (!peliculas)
-{
-  <img src="assets/loading.gif" />
-}
-@else if (peliculas.length === 0)
-{
-  <div>
-    <p>No hay peliculas para mostrar</p>
-  </div>
-}
-@else {
-  @for (pelicula of peliculas; track $index) {
+<app-listado-generico [listado]="peliculas">
+  <ng-container contenido>
+    @for (pelicula of peliculas; track $index) {
     <div class="contenedor-peicula">
       <div style="display: flex; flex-direction: row; gap: 10px">
         <div>
           @if (pelicula.poster) {
-            <img [src]="pelicula.poster" width="169" height="250"/>
-          }
-          @else {
-            <img src="assets/default.jpg" width="169" height="250"/>
+          <img [src]="pelicula.poster" width="169" height="250" />
+          } @else {
+          <img src="assets/default.jpg" width="169" height="250" />
           }
         </div>
         <div>
@@ -34,4 +24,28 @@
       </div>
     </div>
     }
+  </ng-container>
+</app-listado-generico>
+
+@for (pelicula of peliculas; track $index) {
+<div class="contenedor-peicula">
+  <div style="display: flex; flex-direction: row; gap: 10px">
+    <div>
+      @if (pelicula.poster) {
+      <img [src]="pelicula.poster" width="169" height="250" />
+      } @else {
+      <img src="assets/default.jpg" width="169" height="250" />
+      }
+    </div>
+    <div>
+      <p>{{ $index }}) Pelicula: {{ pelicula.titulo }}</p>
+      <p>
+        Fecha de estreno:
+        {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" }}
+      </p>
+      <p>Precio: {{ pelicula.precio | currency }}</p>
+      <button (click)="remover(pelicula)">Remover</button>
+    </div>
+  </div>
+</div>
 }
