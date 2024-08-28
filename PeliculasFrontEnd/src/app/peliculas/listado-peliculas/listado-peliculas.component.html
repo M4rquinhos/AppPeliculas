@@ -19,7 +19,10 @@
             {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" }}
           </p>
           <p>Precio: {{ pelicula.precio | currency }}</p>
-          <button (click)="remover(pelicula)">Remover</button>
+          <button mat-flat-button (click)="remover(pelicula)">
+            <mat-icon>delete</mat-icon>
+            Remover
+          </button>
         </div>
       </div>
     </div>
