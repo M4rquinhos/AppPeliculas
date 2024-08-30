@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { transform } from 'typescript';
 
@@ -12,13 +12,18 @@ import { transform } from 'typescript';
 })
 export class RatingComponent {
 
-  @Input({ required: true , transform: (valor: number) => Array(valor).fill(0)})
+  @Input({ required: true, transform: (valor: number) => Array(valor).fill(0) })
   maximoRating!: number[];
 
   @Input()
   ratingSeleccionado = 0;
 
   // maximoRatingArreglo: any[] = [];
+
+
+  @Output()
+  votado = new EventEmitter<number>();
+
   ratingAnterior = 0;
 
 
@@ -37,6 +42,7 @@ export class RatingComponent {
   manejarMouseClick(indice: number) {
     this.ratingSeleccionado = indice + 1;
     this.ratingAnterior = this.ratingSeleccionado;
+    this.votado.emit(this.ratingSeleccionado);
   }
 
 }
