@@ -1,54 +1,24 @@
-<h2>Mi listado de peliculas</h2>
-
 <app-listado-generico [listado]="peliculas">
   <ng-container contenido>
-    @for (pelicula of peliculas; track $index) {
-    <div class="contenedor-peicula">
-      <div style="display: flex; flex-direction: row; gap: 10px">
-        <div>
+    <div class="peliculas-contenedor">
+      @for (pelicula of peliculas; track $index) {
+      <div class="pelicula-contenedor">
+        <a>
           @if (pelicula.poster) {
-          <img [src]="pelicula.poster" width="169" height="250" />
+          <img [src]="pelicula.poster" width="169" height="250" alt="" />
           } @else {
-          <img src="assets/default.jpg" width="169" height="250" />
+          <img src="/public/assets/default.jpg" alt="" />
           }
-        </div>
+        </a>
+        <p>
+          <a>{{ pelicula.titulo }}</a>
+        </p>
         <div>
-          <p>{{ $index }}) Pelicula: {{ pelicula.titulo }}</p>
-          <p>
-            Fecha de estreno:
-            {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" }}
-          </p>
-          <p>Precio: {{ pelicula.precio | currency }}</p>
-          <button mat-flat-button (click)="remover(pelicula)">
-            <mat-icon>delete</mat-icon>
-            Remover
-          </button>
+          <a mat-flat-button>Editar</a>
+          <button mat-flat-button type="button" color="warn">Borrar</button>
         </div>
       </div>
-    </div>
-    }
-  </ng-container>
-</app-listado-generico>
-
-@for (pelicula of peliculas; track $index) {
-<div class="contenedor-peicula">
-  <div style="display: flex; flex-direction: row; gap: 10px">
-    <div>
-      @if (pelicula.poster) {
-      <img [src]="pelicula.poster" width="169" height="250" />
-      } @else {
-      <img src="assets/default.jpg" width="169" height="250" />
       }
     </div>
-    <div>
-      <p>{{ $index }}) Pelicula: {{ pelicula.titulo }}</p>
-      <p>
-        Fecha de estreno:
-        {{ pelicula.fechaLanzamiento | date : "dd-MMMM-yyyy" }}
-      </p>
-      <p>Precio: {{ pelicula.precio | currency }}</p>
-      <button (click)="remover(pelicula)">Remover</button>
-    </div>
-  </div>
-</div>
-}
+  </ng-container>
+</app-listado-generico>

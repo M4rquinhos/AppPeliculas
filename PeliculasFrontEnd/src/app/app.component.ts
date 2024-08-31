@@ -87,9 +87,7 @@ export class AppComponent implements OnInit {
   }
   peliculasEnCines!: any[];
   peliculasProximosEstrenos!: any[];
-  cargando = true;
 
   procesarVoto(voto: number) {
-    alert(`Calificacion otorgada: ${voto}`);
   }
 }
